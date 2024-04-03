@@ -20,7 +20,6 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
-
   /// connectionHandler to handle internet connectivity status.
   ConnectionHandler connectionHandler = ConnectionHandler();
 
@@ -153,6 +152,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                   ],
                                 ),
                               ),
+                              const SizedBox(height: 20),
                             ],
                           );
                         } else {

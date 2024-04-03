@@ -9,34 +9,31 @@ class TextFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 10),
-      child: TextFormField(
-        controller: controller,
-        style: const TextStyle(color: Colors.white),
-        cursorColor: Colors.white,
-        decoration: InputDecoration(
-          prefixIcon: const Icon(Icons.location_city, color: Colors.white),
-          fillColor: Colors.white,
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide: const BorderSide(
-              color: Colors.white,
-            ),
+    return TextFormField(
+      controller: controller,
+      style: const TextStyle(color: Colors.white),
+      cursorColor: Colors.white,
+      decoration: InputDecoration(
+        prefixIcon: const Icon(Icons.location_city, color: Colors.white),
+        fillColor: Colors.white,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(
+            color: Colors.white,
           ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide: const BorderSide(
-              color: Colors.white,
-            ),
-          ),
-          labelText: "Please enter the city name.",
-          labelStyle: const TextStyle(color: Colors.white),
         ),
-        validator: FormValidator().cityNameValidator,
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        keyboardType: TextInputType.text,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(
+            color: Colors.white,
+          ),
+        ),
+        labelText: "Please enter the city name.",
+        labelStyle: const TextStyle(color: Colors.white),
       ),
+      validator: FormValidator().cityNameValidator,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      keyboardType: TextInputType.text,
     );
   }
 }
